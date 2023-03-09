@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WebPostgreSQL.Models.Produto>
+
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<div class="text-center">
+    <h1 class="display-4">Olá Seja Bem vindo ao sistema de Cadastro de Clientes!</h1>
+    <br />
+    <h3>Clicando na opção "Relação de clientes" voce terá acesso aos clientes cadastrados.</h3>
+    <h2>Caso seu cliente ainda não esta cadastrado, você poderá acessar a opção "Criar Novo"</h2>
+   
+</div>
+
+<div id="hero-carousel" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+            <img src="https://images.unsplash.com/photo-1586281380212-95ee2785aa66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 c-img" alt="Slide 1">
+            <div class="carousel-caption top-0 mt-4 ">
+                <p class="mt-5 fs-3 text-uppercase ">CRUD PostGre</p>
+                <h1 class="display-1 fw-bolder text-capitalize " id="CTA-carousel">Criação de Cadastro</h1>
+                <h3 id="CTA2-carousel">Conquiste Clientes e cadastre-os</h3>
+                <button class="btn btn-primary px-4 py-2 fs-5 mt-3"> <a href="https://api.whatsapp.com/send?phone=5515981309966&text=Ol%C3%A1!%20Vi%20seu%20site%20portif%C3%B3lio!" style="color:aliceblue" target="_blank">Contato</a> </button>
+            </div>
+        </div>
+        <div class="carousel-item c-item">
+            <img src="https://images.unsplash.com/photo-1518135714426-c18f5ffb6f4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1196&q=80" class="d-block w-100 c-img" alt="Slide 2">
+            <div class="carousel-caption top-0 mt-4 ">
+                <p class="mt-5 fs-2 text-uppercase ">CRUD PostGre</p>
+                <h1 class="display-1 fw-bolder text-capitalize fs-13" id="CTA-carousel">Edite um Cliente já Existente</h1>
+                <h4 id="CTA2-carousel">Se seu cliente mudou de endereço, isso não é mais um problema</h4>
+                <button class="btn btn-primary px-4 py-2 fs-5 mt-3"> <a href="https://api.whatsapp.com/send?phone=5515981309966&text=Ol%C3%A1!%20Vi%20seu%20site%20portif%C3%B3lio!" style="color:aliceblue" target="_blank">Contato</a> </button>
+            </div>
+        </div>
+        <div class="carousel-item  c-item">
+            <img src="https://images.unsplash.com/photo-1593510987046-1f8fcfc512a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 c-img" alt="Slide 3">
+            <div class="carousel-caption top-0 mt-0 ">
+                <p class="mt-5 fs-3 text-uppercase ">CRUD PostGre</p>
+                <h1 class="display-1 fw-bolder text-capitalize " id="CTA-carousel">Delete um Cliente indesejável</h1>
+                <h3 id="CTA2-carousel">Claro! sempre tem "Aquele" cliente...</h3>
+                <button class="btn btn-primary px-4 py-2 fs-5 mt-3"> <a href="https://api.whatsapp.com/send?phone=5515981309966&text=Ol%C3%A1!%20Vi%20seu%20site%20portif%C3%B3lio!" style="color:aliceblue" target="_blank">Contato</a> </button>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<style>
+    .c-item {
+        height: 80vh;
+    }
+
+    .c-img {
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+    }
+
+    #CTA-carousel {
+        animation: fadeInLeftBig; /* referring directly to the animation's  declaration */
+        animation-duration: 1s;
+    }
+
+    #CTA2-carousel {
+        animation: fadeInRightBig; /* referring directly to the animation's keyframe declaration */
+        animation-duration: 1s;
+    }
+</style>
